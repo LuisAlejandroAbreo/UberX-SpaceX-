@@ -1,6 +1,5 @@
 
 :root {
-
     --glass: rgba(255, 255, 255, 0.1);
 
     --blur: 10px;
@@ -49,20 +48,6 @@ h2,
     border-radius: var(--radius-xl);
     color: var(--accent);
     padding: 10px 20px;
-}
-
-:root {
-    --space-gradient: linear-gradient(to top right, #2e0043, #03053c, #021884);
-    --accent: #007bff;
-    --text-1: #ffffff;
-    --accent-glow: 0 0 20px rgba(0, 123, 255, 0.5);
-}
-
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #002af9;
-    color: white;
 }
 
 .splash-body {
@@ -149,3 +134,321 @@ body {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+.home-header {
+    padding: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+}
+
+.security-card {
+    background: var(--glass);
+    backdrop-filter: blur(var(--blur));
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.security-text h2 {
+    font-size: var(--fz-lg);
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.security-img {
+    width: 120px;
+    height: auto;
+}
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.action-btn {
+    background: white;
+    border: none;
+    border-radius: var(--radius-xl);
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Buscador --- */
+.search-container {
+    padding: 0 20px;
+}
+
+.search-wrapper {
+    background: #2a2b3d;
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 15px;
+    flex: 1;
+}
+
+.search-history {
+    background: #3f4056;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+/* --- Listado de Destinos --- */
+.destinations-list {
+    list-style: none;
+    padding: 20px;
+}
+
+.destinations-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dest-info h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.dest-info p {
+    font-size: 0.8rem;
+    color: var(--text-1);
+    margin: 0;
+}
+
+/* --- Bottom Nav --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(20, 20, 35, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.nav-item.active {
+    color: white;
+}
+
+/* --- Variables y Reset --- */
+:root {
+    --glass: rgba(255, 255, 255, 0.1);
+    --blur: 10px;
+    --accent: #007bff;
+    --text-1: #ffffff;
+    --fz-lg: 1.25rem;
+    --fz-xl: 1.5rem;
+    --radius-xl: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    /* Fondo para Desktop */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Contenedor Principal (El "Celular") --- */
+.container {
+    width: 100%;
+    max-width: 450px;
+    /* Marco de dispositivo según requerimiento */
+    height: 100vh;
+    --space-gradient: linear-gradient(to top right, #2e0043, #03053c, #021884);
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajuste para Desktop (≥ 1280px) */
+@media (min-width: 1280px) {
+    .container {
+        height: 90vh;
+        max-height: 900px;
+        border-radius: 40px;
+        border: 8px solid #333;
+    }
+}
+
+/* Ajuste para Mobile (≤ 480px) */
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+        /* Una columna en móvil */
+    }
+
+    .action-btn {
+        width: 100%;
+        /* Botones al 100% */
+    }
+}
+
+/* --- Splash Screen --- */
+.splash-body .container {
+    background: var(--space-gradient);
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image-wrapper {
+    width: 250px;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.splash-logo-img {
+    width: 100%;
+    height: auto;
+}
+
+/* --- Home Components --- */
+.home-header {
+    padding: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+}
+
+.security-card {
+    background: var(--glass);
+    backdrop-filter: blur(var(--blur));
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.action-btn {
+    background: white;
+    border: none;
+    border-radius: var(--radius-xl);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.bottom-nav {
+    position: sticky;
+    /* Cambiado a sticky para que siempre esté al final del contenido del container */
+    bottom: 0;
+    margin-top: auto;
+    width: 100%;
+    background: rgba(20, 20, 35, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+/* --- Animaciones --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.page-entrance {
+    animation: slideInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+

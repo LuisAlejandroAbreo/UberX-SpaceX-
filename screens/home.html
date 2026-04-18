@@ -6,12 +6,88 @@
     <title>UberX - Home</title>
     <link rel="stylesheet" href="../css/app.css">
 </head>
-<body class="page-entrance">
-    
-    <main>
-        <h1>Bienvenido a Home</h1>
-        <p>Contenido de la página principal...</p>
-    </main>
+<body>
+    <div class="container page-entrance">
+        <header class="home-header">
+            <div class="user-profile">
+                <img src="../assets/img/avatar.png" alt="Avatar" class="avatar">
+                <h1>William Teig</h1>
+            </div>
+            
+            <div class="security-card">
+                <div class="security-text">
+                    <h2 style="font-size: 1rem;">Always Wear Your Helmet When Traveling In Space</h2>
+                    <a href="#" style="color: var(--accent); text-decoration: none; font-size: 0.8rem;">About Safe Space Flight ></a>
+                </div>
+                <img src="../assets/img/astronaut-illustration.png" alt="Astronaut" class="security-img" style="width: 80px;">
+            </div>
+        </header>
 
+        <section class="quick-actions">
+            <button class="action-btn">
+                <img src="../assets/icons/travel.png" alt="" width="30">
+                <span>Travel</span>
+            </button>
+            <button class="action-btn">
+                <img src="../assets/icons/explore.png" alt="" width="30">
+                <span>Explore</span>
+            </button>
+            <button class="action-btn">
+                <img src="../assets/icons/book.png" alt="" width="30">
+                <span>Book</span>
+            </button>
+        </section>
+
+        <div class="search-container">
+            <div class="search-wrapper">
+                <input type="search" placeholder="Where to...?" class="search-input">
+                <div class="search-history">
+                    <img src="../assets/icons/clock.png" alt="History" width="16">
+                    <span>Now</span>
+                    <span class="arrow-down">▼</span>
+                </div>
+            </div>
+        </div>
+
+        <ul class="destinations-list">
+            <li>
+                <img src="../assets/img/earth.png" alt="Earth" class="dest-img">
+                <div class="dest-info">
+                    <h3>Earth</h3>
+                    <p class="secondary-text">Solar System, Planet 4</p>
+                </div>
+            </li>
+            <li>
+                <img src="../assets/img/mars.png" alt="Mars" class="dest-img">
+                <div class="dest-info">
+                    <h3>Mars</h3>
+                    <p class="secondary-text">Solar System, Planet 5</p>
+                </div>
+            </li>
+            <li>
+                <img src="../assets/img/iss.png" alt="ISS" class="dest-img">
+                <div class="dest-info">
+                    <h3>International Space Station</h3>
+                    <p class="secondary-text">Low Earth Orbit</p>
+                </div>
+            </li>
+            <li>
+                <img src="../assets/img/moon.png" alt="Moon" class="dest-img">
+                <div class="dest-info">
+                    <h3>Moon</h3>
+                    <p class="secondary-text">Earth's Satellite</p>
+                </div>
+            </li>
+        </ul>
+
+        <nav class="bottom-nav">
+            <a href="home.html" class="nav-item active" aria-current="page">
+                <span>Home</span>
+            </a>
+            <a href="travel.html" class="nav-item">
+                <span>Journeys</span>
+            </a>
+        </nav>
+    </div>
 </body>
 </html>
