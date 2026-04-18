@@ -52,7 +52,7 @@ h2,
 }
 
 :root {
-    --space-gradient: linear-gradient(to top right, #010017, #2f0038);
+    --space-gradient: linear-gradient(to top right, #2e0043, #03053c, #021884);
     --accent: #007bff;
     --text-1: #ffffff;
     --accent-glow: 0 0 20px rgba(0, 123, 255, 0.5);
@@ -89,8 +89,7 @@ body {
 
 .logo-image-wrapper {
     margin-top: 200px;
-    width: 300px;
-    filter: drop-shadow(var(--accent-glow));
+    width: 200px;
 }
 
 .splash-logo-img {
