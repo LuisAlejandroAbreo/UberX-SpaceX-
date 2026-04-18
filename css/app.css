@@ -455,3 +455,302 @@ body {
     animation: slideInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
+/* ============================================================
+   SECCIÓN 3: TRAVEL (Mapa y Bottom Sheet)
+   ============================================================ */
+
+/* --- Variables Adicionales para el Mapa --- */
+:root {
+    --chip-bg: rgba(255, 255, 255, 0.15);
+    --chip-glow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Vista del Mapa (Header) --- */
+.map-view {
+    height: 60vh;
+    /* Ocupa gran parte de la pantalla */
+    position: relative;
+    overflow: hidden;
+    /* Fondo espacial ya definido en .container */
+}
+
+/* Chips Flotantes */
+.floating-chip {
+    position: absolute;
+    background: var(--chip-bg);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    filter: drop-shadow(var(--chip-glow));
+    pointer-events: none;
+    /* No interactivo */
+}
+
+.chip-earth {
+    top: 20%;
+    left: 15%;
+}
+
+.chip-mars {
+    top: 40%;
+    right: 15%;
+}
+
+/* Arco de Ruta Punteado (SVG) */
+.route-arc {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    height: 60%;
+    opacity: 0.5;
+}
+
+/* --- Bottom Sheet Deslizable (Simulado) --- */
+.bottom-sheet {
+    
+    bottom: 0;
+    width: 100%;
+    max-width: 450px;
+    /* Limitado por el container principal */
+    backdrop-filter: blur(10px);
+    /* Fondo oscuro y opaco para el panel */
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: var(--radius-xl);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+
+    /* Estado inicial: Contraído */
+    height: 180px;
+    transition: height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 100;
+    /* Por encima del mapa */
+}
+
+/* Tirador/Asa para arrastrar */
+.sheet-handle {
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sheet-handle:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Lógica de Checkbox (Hack CSS para expandir) --- */
+
+/* Cuando el checkbox está activado -> Expandir el panel */
+#sheet-toggle:checked~.bottom-sheet {
+    height: 55vh;
+    /* Altura máxima permitida */
+}
+
+/* Ocultar/Mostrar contenido según el estado */
+.sheet-collapsed-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.vehicle-list {
+    display: none;
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+#sheet-toggle:checked~.bottom-sheet .sheet-collapsed-content {
+    display: none;
+}
+
+#sheet-toggle:checked~.bottom-sheet .vehicle-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* --- Contenido Contraído (Estilos) --- */
+.vehicle-thumb-lg {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+.launch-info h3 {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.7;
+}
+
+.launch-duration {
+    font-size: 1.1rem;
+    margin: 4px 0 0 0;
+}
+
+.price-info {
+    text-align: right;
+    margin-left: auto;
+}
+
+.currency {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    display: block;
+}
+
+.price-lg {
+    font-size: var(--fz-xl);
+    font-weight: bold;
+}
+
+/* --- Lista de Naves (Estado Expandido) --- */
+.vehicle-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    transition: background 0.3s, border 0.3s;
+}
+
+/* Estados: Card activo resaltado (borde/acento) y Hover/Focus */
+.vehicle-item.active {
+    background: rgba(0, 123, 255, 0.1);
+    border: 2px solid var(--accent);
+}
+
+.vehicle-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.vehicle-thumb {
+    width: 45px;
+    height: auto;
+    object-fit: contain;
+}
+
+.vehicle-details h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.vehicle-details p {
+    font-size: 0.8rem;
+    margin: 4px 0 0 0;
+}
+
+.vehicle-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+/* --- Acciones Inferiores (Estilos) --- */
+.sheet-actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.btn-connect-wallet {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    border-radius: var(--radius-xl);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-connect-wallet:hover {
+    background: rgb(28, 27, 75)
+}
+
+/* --- Swipe to Confirm (Input Range Simulado) --- */
+.swipe-container {
+    background: #090a0f;
+    border-radius: var(--radius-xl);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.swipe-label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    pointer-events: none;
+    /* No interfiere con el slider */
+    z-index: 1;
+}
+
+.confirm-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    cursor: ew-resize;
+    position: relative;
+    z-index: 2;
+    /* Por encima de la etiqueta */
+}
+
+/* El "tirador" del slider */
+.confirm-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60px;
+    height: 40px;
+    background: var(--accent);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+}
+
+/* --- Lógica de Confirmación (Hack CSS con :has()) --- */
+
+/* Cuando el slider llega al 100% (añadimos la clase visual .has(input[value="100"])) */
+
+/* Simulamos la estadía visual: Cuando el slider tiene foco, resaltamos el contenedor */
+.swipe-container:has(input[type="range"]:focus) {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Simulamos la confirmación: Cambiamos el color de fondo y el tirador cuando está al 100% */
+.swipe-container:has(input[type="range"][value="100"]) {
+    background: rgba(0, 123, 255, 0.2);
+    /* Resaltado visual */
+}
+
+.swipe-container:has(input[type="range"][value="100"]) .confirm-slider::-webkit-slider-thumb {
+    background: #28a745;
+    /* Verde para confirmar */
+}

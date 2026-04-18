@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UberX - Travel Map</title>
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+    <div class="container page-entrance">
+        <header class="map-view">
+            <img src="../assets/img/earth.jpg" alt="Earth">
+            <div class="floating-chip chip-earth">
+                <span>Earth</span>
+            </div>
+            <div class="floating-chip chip-mars">
+                <span>Mars</span>
+            </div>
+
+            <svg class="route-arc" viewBox="0 0 400 300">
+                <path d="M50 30 Q 200 50, 350 150" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-dasharray="8 8" />
+            </svg>
+        </header>
+
+        <main class="travel-content visually-hidden">
+            <h1>Select Your Vehicle</h1>
+            </main>
+
+        <input type="checkbox" id="sheet-toggle" class="visually-hidden">
+
+        <section class="bottom-sheet">
+            <label for="sheet-toggle" class="sheet-handle"></label>
+
+            <div class="sheet-collapsed-content">
+                <img src="../assets/img/crew-dragon.png" alt="Crew Dragon" class="vehicle-thumb-lg">
+                <div class="launch-info">
+                    <h3>Next Launch</h3>
+                    <p class="launch-duration secondary-text">18 Days, 13 Hours</p>
+                </div>
+                <div class="price-info">
+                    <span class="currency">Token/Moneda</span>
+                    <span class="price-lg">48.5</span>
+                    <img src="../assets/img/crew-dragon.png" alt="token" class="token">
+                </div>
+            </div>
+
+            <ul class="vehicle-list">
+                <li class="vehicle-item active">
+                    <img src="../assets/img/crew-dragon.png" alt="Crew Dragon" class="vehicle-thumb">
+                    <div class="vehicle-details">
+                        <h4>Crew Dragon</h4>
+                        <p class="vehicle-meta secondary-text">SpaceX</p>
+                    </div>
+                    <span class="vehicle-price">48.5</span>
+                </li>
+                
+                <li class="vehicle-item">
+                    <img src="../assets/img/starliner.png" alt="Starliner" class="vehicle-thumb">
+                    <div class="vehicle-details">
+                        <h4>Starliner</h4>
+                        <p class="vehicle-meta secondary-text">Boeing</p>
+                    </div>
+                    <span class="vehicle-price">55.0</span>
+                </li>
+
+                <li class="vehicle-item">
+                    <img src="../assets/img/dream-chaser.png" alt="Dream Chaser" class="vehicle-thumb">
+                    <div class="vehicle-details">
+                        <h4>Dream Chaser</h4>
+                        <p class="vehicle-meta secondary-text">Sierra Space</p>
+                    </div>
+                    <span class="vehicle-price">62.2</span>
+                </li>
+            </ul>
+
+            <footer class="sheet-actions">
+                <a href="payment-methods.html" class="btn-connect-wallet">
+                    <span>Connect Wallet</span>
+                    
+                </a>
+
+                <div class="swipe-container">
+                    <input type="range" min="0" max="100" value="0" class="confirm-slider" id="confirm-booking">
+                    <span class="swipe-label secondary-text">Swipe to Confirm Your Booking</span>
+                </div>
+            </footer>
+        </section>
+
+    </div>
+</body>
+</html>
