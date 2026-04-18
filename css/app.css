@@ -269,15 +269,20 @@ h2,
 
 .nav-item {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: #1a1a1a;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 0.8rem;
+    font-weight: bold;
 }
 
 .nav-item.active {
     color: white;
+}
+
+.nav-item.inactive {
+    color: #555;
 }
 
 /* --- Variables y Reset --- */
