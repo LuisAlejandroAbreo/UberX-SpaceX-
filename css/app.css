@@ -1,0 +1,55 @@
+
+:root {
+
+    --glass: rgba(255, 255, 255, 0.1);
+
+    --blur: 10px;
+    --accent: #007bff;
+
+    --text-1: #ffffff;
+
+    /* Tipografía */
+    --fz-lg: 1.25rem;
+    --fz-xl: 1.5rem;
+
+    /* Bordes */
+    --radius-xl: 20px;
+}
+
+.card {
+    background: var(--glass);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    border-radius: var(--radius-xl);
+    padding: 20px;
+}
+
+h1,
+.title-xl {
+    font-size: var(--fz-xl);
+}
+
+h2,
+.title-lg {
+    font-size: var(--fz-lg);
+}
+
+.secondary-text {
+    color: var(--text-1);
+}
+
+.btn-primary {
+    background: var(--accent);
+    border-radius: var(--radius-xl);
+    border: none;
+    padding: 10px 20px;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-xl);
+    color: var(--accent);
+    padding: 10px 20px;
+}
+
