@@ -7,20 +7,27 @@
     <link rel="stylesheet" href="../css/app.css" />
   </head>
   <body>
-    <div class="page-container">
-      <header class="page-header">
-        <a
-          href="travel.html"
-          class="btn-back"
-          aria-label="Volver a Travel"
-          style="text-decoration: none"
-        >
-          <span aria-hidden="true">←</span>
-        </a>
-        <h1 class="page-title">Payment Methods</h1>
+    <div class="container page-entrance-payment">
+      <header class="home-header">
+        <div style="display: flex; align-items: center">
+          <a
+            href="travel.html"
+            class="btn-back"
+            aria-label="Volver a Travel"
+            style="
+              text-decoration: none;
+              color: white;
+              margin-right: 15px;
+              font-size: 1.5rem;
+            "
+          >
+            <span aria-hidden="true">←</span>
+          </a>
+          <h1 class="title-x2">Payment Methods</h1>
+        </div>
       </header>
 
-      <section class="search-section">
+      <section class="search-container">
         <div class="search-wrapper">
           <span class="search-icon" aria-hidden="true">🔍</span>
           <input
@@ -32,8 +39,22 @@
         </div>
       </section>
 
-      <main class="payment-content">
-        <ul class="payment-list">
+      <main
+        class="payment-content"
+        style="padding: 20px; flex: 1; overflow-y: auto
+        "
+      >
+        <ul
+          class="payment-list"
+          style="
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            
+          "
+        >
           <li>
             <button class="payment-item-btn" role="button">
               <span class="visually-hidden"
@@ -42,12 +63,10 @@
               <div class="card-logo logo-mastercard" aria-hidden="true">
                 <span>MC</span>
               </div>
-
               <div class="item-content">
                 <h2 class="item-title">**** **** **** 1234</h2>
                 <p class="item-subtitle">Expires 12/25</p>
               </div>
-
               <div class="item-actions">
                 <span class="default-badge">Default</span>
                 <span class="kebab-icon" aria-hidden="true">⋮</span>
@@ -56,29 +75,88 @@
           </li>
 
           <li>
-            <div class="payment-item-btn" role="button" tabindex="0">
+            <div
+              class="payment-item-btn"
+              role="button"
+              tabindex="0"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px;
+                width: 100%;
+                box-sizing: border-box;
+              "
+            >
               <span class="visually-hidden"
                 >Método de pago: Tarjeta terminada en 5678</span
               >
-              <div class="card-logo logo-visa" aria-hidden="true">
-                <span>VISA</span>
+
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  flex: 1;
+                  min-width: 0;
+                "
+              >
+                <div
+                  class="card-logo logo-visa"
+                  aria-hidden="true"
+                  style="flex-shrink: 0"
+                >
+                  <span>VISA</span>
+                </div>
+
+                <div
+                  class="item-content"
+                  style="min-width: 0; overflow: hidden"
+                >
+                  <h2
+                    class="item-title"
+                    style="
+                      font-size: 1.1rem;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                    "
+                  >
+                    **** **** **** 5678
+                  </h2>
+                  <p class="item-subtitle">Expires 01/26</p>
+                </div>
               </div>
 
-              <div class="item-content">
-                <h2 class="item-title">**** **** **** 5678</h2>
-                <p class="item-subtitle">Expires 01/26</p>
-              </div>
-
-              <div class="item-actions">
+              <div
+                class="item-actions"
+                style="
+                  display: flex;
+                  gap: 10px;
+                  margin-left: 10px;
+                  flex-shrink: 0;
+                "
+              >
                 <button
                   class="action-btn-pay edit"
-                  aria-label="Editar este método de pago"
+                  aria-label="Editar"
+                  style="
+                    background: none;
+                    border: none;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                  "
                 >
                   <span aria-hidden="true">✏️</span>
                 </button>
                 <button
                   class="action-btn-pay delete"
-                  aria-label="Eliminar este método de pago"
+                  aria-label="Eliminar"
+                  style="
+                    background: none;
+                    border: none;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                  "
                 >
                   <span aria-hidden="true">🗑️</span>
                 </button>
@@ -94,18 +172,30 @@
               <div class="paypal-logo logo-paypal" aria-hidden="true">
                 <span>PP</span>
               </div>
-
               <div class="item-content">
                 <h2 class="item-title">PayPal</h2>
                 <p class="item-subtitle">j.doe@example.com</p>
+                
               </div>
             </button>
           </li>
         </ul>
       </main>
 
-      <footer class="sticky-footer">
-        <button class="btn-add-new" role="button">Add New Method</button>
+      <footer
+        style="
+          padding: 20px;
+          background: rgba(20, 20, 35, 0.9);
+          backdrop-filter: blur(10px);
+        "
+      >
+        <button
+          class="btn-primary"
+          style="font-size:1.1rem; width: 100%; color: white; font-weight: bold; cursor: pointer;
+         background-color: #283039"
+        >
+          Add New Method
+        </button>
       </footer>
     </div>
   </body>

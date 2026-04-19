@@ -146,6 +146,12 @@ h2,
     overflow: hidden;
 }
 
+.page-entrance-payment{
+    animation: slideInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    overflow: hidden;
+    background-color: #0F1921;
+}
+
 .page-entrance main {
     animation: reEnableScroll 0s 1.5s forwards;
 }
@@ -225,6 +231,7 @@ h2,
 
 .search-container {
     padding: 0 20px;
+    background-color: #0F1921;
 }
 
 .search-wrapper {
@@ -1212,4 +1219,9 @@ h2,
     color: white;
     text-decoration: none;
     backdrop-filter: blur(10px);
+}
+
+.title-x2 {
+    text-align: center;
+    margin-left: 50px;
 }
