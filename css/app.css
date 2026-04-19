@@ -696,7 +696,6 @@ h2,
     width: 100%;
     max-width: 450px;
     background: #0F1921;
-    /* Fondo oscuro base */
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
@@ -704,7 +703,6 @@ h2,
     position: relative;
 }
 
-/* --- CABECERA --- */
 .page-header {
     display: flex;
     align-items: center;
@@ -730,7 +728,6 @@ h2,
     outline: none;
 }
 
-/* Título h1 con --fz-xl */
 .page-title {
     font-size: var(--fz-xl);
     font-weight: 700;
@@ -739,14 +736,12 @@ h2,
     padding: 20px;
 }
 
-/* --- BUSCADOR --- */
 .search-section {
     padding: var(--space-5);
 }
 
 .search-wrapper {
     background: #0F1921;
-    /* Más visible que el fondo */
     border-radius: var(--radius-xl);
     display: flex;
     align-items: center;
@@ -764,7 +759,6 @@ h2,
     margin-right: 10px;
 }
 
-/* input type="search" solicitado */
 .search-input {
     background: transparent;
     border: none;
@@ -782,20 +776,16 @@ h2,
     outline: none;
 }
 
-/* --- LISTA DE MÉTODOS --- */
 .payment-list {
     list-style: none;
     padding: 0 var(--space-5);
     margin: 0;
     flex: 1;
-    /* Permite que el CTA inferior empuje */
     display: flex;
     flex-direction: column;
     gap: var(--space-5);
-    /* Separación vertical --space-5 */
 }
 
-/* Fila como botón para accesibilidad */
 .payment-item-btn {
     display: flex;
     align-items: center;
@@ -810,7 +800,6 @@ h2,
     text-align: left;
     transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
     text-decoration: none;
-    /* Por si se usa 'a' */
 }
 
 .payment-item-btn:hover {
@@ -818,13 +807,11 @@ h2,
     transform: translateY(-2px);
 }
 
-/* Foco visible solicitado */
 .payment-item-btn:focus-visible {
     outline: none;
     box-shadow: 0 0 0 3px var(--accent), 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Logotipos simulados */
 .card-logo,
 .paypal-logo {
     width: 45px;
@@ -837,7 +824,6 @@ h2,
     flex-shrink: 0;
 }
 
-/* Simulación visual de logotipos */
 .logo-visa {
     background-color: #fff;
     color: #1a1f71;
@@ -863,7 +849,6 @@ h2,
     flex-direction: column;
 }
 
-/* Títulos de tarjetas con --fz-lg */
 .item-title {
     font-size: var(--fz-lg);
     font-weight: 600;
@@ -876,7 +861,6 @@ h2,
     margin: 4px 0 0 0;
 }
 
-/* Acciones y Badges */
 .item-actions {
     display: flex;
     align-items: center;
@@ -884,7 +868,6 @@ h2,
     margin-right: 30px;
 }
 
-/* Badge amarillo solicitado */
 .default-badge {
     background-color: yellow;
     color: black;
@@ -895,7 +878,6 @@ h2,
     text-transform: uppercase;
 }
 
-/* Botones de acción (edit, delete) */
 .action-btn-pay {
     background: none;
     border: none;
@@ -915,36 +897,29 @@ h2,
 .action-btn.delete:hover,
 .action-btn.delete:focus {
     color: #dc3545;
-    /* Rojo para delete */
 }
 
-/* Ícono kebab decorativo */
 .kebab-icon {
     color: var(--text-secondary);
     margin-left: 10px;
     cursor: default;
 }
 
-/* --- CTA INFERIOR (STICKY) --- */
 .sticky-footer {
     position: sticky;
     bottom: 0;
     padding: var(--space-5);
     background: rgba(18, 20, 33, 0.95);
-    /* Fondo sólido difuminado */
     backdrop-filter: blur(5px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: auto;
-    /* Empuja el CTA al final si hay poco contenido */
 }
 
-/* Botón ancho con estilos de image_0.png */
 .btn-add-new {
     display: block;
     width: 100%;
     padding: 20px;
     background-color: #2a2b3d;
-    /* Usando el color de search-wrapper para unificar */
     color: var(--text-main);
     border: none;
     border-radius: var(--radius-xl);
@@ -958,7 +933,6 @@ h2,
 
 .btn-add-new:hover {
     background-color: #3f4056;
-    /* Hover más claro */
 }
 
 .btn-add-new:focus-visible {
@@ -966,7 +940,6 @@ h2,
     box-shadow: 0 0 0 3px var(--accent);
 }
 
-/* --- UTILIDADES DE ACCESIBILIDAD --- */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -977,16 +950,14 @@ h2,
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-/* --- Lógica de Vistas --- */
+
 .vehicle-detail-view {
     display: none;
-    /* Oculto por defecto */
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
 }
 
-/* Cuando el toggle de detalle está activo: */
 #detail-view-toggle:checked~.vehicle-detail-view {
     display: flex;
 }
@@ -996,13 +967,11 @@ h2,
     display: none !important;
 }
 
-/* Ajuste de altura del sheet para el detalle */
 #detail-view-toggle:checked~.bottom-sheet,
 #sheet-toggle:checked~.bottom-sheet:has(#detail-view-toggle:checked) {
     height: 80vh;
 }
 
-/* --- Estilos de la Vista de Detalle (image_a6085a.png) --- */
 .surge-notice {
     font-size: 0.8rem;
     opacity: 0.6;
@@ -1010,9 +979,9 @@ h2,
 }
 
 .detail-main-img {
-    width: 180px;
+    width: 100px;
     height: auto;
-    margin: 20px 0;
+    margin: 10px 0;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
 }
 
@@ -1050,7 +1019,6 @@ h2,
     box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-/* Botón Wallet estilo Imagen */
 .btn-connect-wallet {
     background: rgba(255, 255, 255, 0.05);
     padding: 18px;
@@ -1071,13 +1039,10 @@ h2,
     height: 24px;
     background: #fff;
     mask: url('data:image/svg+xml;utf8,<svg...>...</svg>') no-repeat center;
-    /* Aquí iría el icono */
     background-color: white;
     clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%);
-    /* Simulación de icono */
 }
 
-/* Ajuste del Swipe */
 .swipe-container {
     background: rgba(255, 255, 255, 0.1);
     height: 60px;
@@ -1090,7 +1055,6 @@ h2,
     border-radius: 12px;
 }
 
-/* --- Estilos Receipt (image_a68c36.png) --- */
 
 .receipt-body {
     background: var(--space-gradient);
@@ -1098,12 +1062,10 @@ h2,
 
 .receipt-card {
     background: rgba(255, 255, 255, 0.95);
-    /* Blanco semi-transparente como la imagen */
     border-radius: 30px;
     margin: 40px 20px 20px 20px;
     padding: 30px;
     color: #1a1a1a;
-    /* Texto oscuro para contraste */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
