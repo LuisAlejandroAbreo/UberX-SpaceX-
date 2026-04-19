@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Receipt</title>
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<body class="receipt-body">
+    <div class="container">
+        <div class="receipt-card">
+            <header class="receipt-header">
+                <div class="receipt-total">$859.50</div>
+                <p class="airline-name">SpaceX Airline</p>
+                <p class="receipt-date">15th Oct 2024, 08:15 AM</p>
+            </header>
+
+            <div class="receipt-divider"></div>
+
+            <section class="flight-details">
+                <h3 class="section-title">Flight Details</h3>
+                
+                <div class="flight-route">
+                    <div class="route-point">
+                        <span class="airport-code">JFK</span>
+                        <span class="flight-time">10:30 AM</span>
+                    </div>
+                    <div class="route-icon">
+                        <img src="../assets/img/airplane-icon.png" alt="icon" class="plane-svg">
+                        <div class="route-line"></div>
+                    </div>
+                    <div class="route-point">
+                        <span class="airport-code">LAX</span>
+                        <span class="flight-time">01:45 PM</span>
+                    </div>
+                </div>
+
+                <div class="flight-info-grid">
+                    <div class="info-item">
+                        <span class="label">Flight Number</span>
+                        <span class="value">AN123</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Seat</span>
+                        <span class="value">24A</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="price-breakdown">
+                <div class="price-row">
+                    <span>Fare</span>
+                    <span>$780.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Taxes & Fees</span>
+                    <span>$79.50</span>
+                </div>
+                <div class="price-row total-row">
+                    <span>Total</span>
+                    <span>$859.50</span>
+                </div>
+            </section>
+
+            <footer class="receipt-footer">
+                <div class="footer-item">
+                    <div class="icon-box">💳</div>
+                    <div class="footer-text">
+                        <span class="label">Payment Method</span>
+                        <span class="value">Amex **** 5678</span>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <div class="icon-box">🏷️</div>
+                    <div class="footer-text">
+                        <span class="label">Category</span>
+                        <span class="badge-travel">Travel</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        <a href="travel.html" class="btn-done">Done</a>
+    </div>
+</body>
+</html>

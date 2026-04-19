@@ -56,7 +56,11 @@
           <div class="price-info">
             <span class="currency">Token</span>
             <span class="price-lg">48.5</span>
-            <img src="../assets/img/token.png" alt="token icon" class="token-icon-sm" />
+            <img
+              src="../assets/img/token.png"
+              alt="token icon"
+              class="token-icon-sm"
+            />
           </div>
         </div>
 
@@ -73,8 +77,50 @@
                 <p class="vehicle-meta secondary-text">SpaceX</p>
               </div>
               <span class="vehicle-price">48.5</span>
-              <img src="../assets/img/token.png" alt="token icon" class="token-icon-sm" />
+              <img
+                src="../assets/img/token.png"
+                alt="token icon"
+                class="token-icon-sm"
+              />
             </li>
+          </label>
+          <label for="detail-view-toggle" class="vehicle-item-label">
+            <li class="vehicle-item inactive">
+              <img
+                src="../assets/img/starliner.png"
+                alt="Starliner"
+                class="vehicle-thumb"
+              />
+              <div class="vehicle-details">
+                <h4>Starliner</h4>
+                <p class="vehicle-meta secondary-text">Next Launch</p>
+              </div>
+              <span class="vehicle-price">48.5</span>
+              <img
+                src="../assets/img/token.png"
+                alt="token icon"
+                class="token-icon-sm"
+              />
+            </li>
+            <label for="detail-view-toggle" class="vehicle-item-label">
+              <li class="vehicle-item inactive">
+                <img
+                  src="../assets/img/dream-chaser.png"
+                  alt="Dream Chaser"
+                  class="vehicle-thumb"
+                />
+                <div class="vehicle-details">
+                  <h4>Dream Chaser</h4>
+                  <p class="vehicle-meta secondary-text">Next Launch</p>
+                </div>
+                <span class="vehicle-price">48.5</span>
+                <img
+                  src="../assets/img/token.png"
+                  alt="token icon"
+                  class="token-icon-sm"
+                />
+              </li>
+            </label>
           </label>
         </ul>
 
@@ -94,7 +140,11 @@
             </div>
             <div class="detail-price">
               <span>48.5</span>
-              <img src="../assets/img/token.png" alt="token icon" class="token-icon" />
+              <img
+                src="../assets/img/token.png"
+                alt="token icon"
+                class="token-icon"
+              />
             </div>
           </div>
         </div>
@@ -102,7 +152,11 @@
         <footer class="sheet-actions">
           <a href="payment-methods.html" class="btn-connect-wallet">
             <div class="wallet-icon-placeholder"></div>
-            <img src="../assets/img/wallet.png" alt="wallet icon" class="wallet-icon" />
+            <img
+              src="../assets/img/wallet.png"
+              alt="wallet icon"
+              class="wallet-icon"
+            />
             <span>Connect Wallet</span>
             <span class="arrow-right">›</span>
           </a>
@@ -123,5 +177,17 @@
         </footer>
       </section>
     </div>
+    <script>
+      const confirmSlider = document.getElementById("confirm-booking");
+
+      confirmSlider.addEventListener("input", (e) => {
+        if (e.target.value === "100") {
+          // Pequeño retraso para que el usuario vea el cambio de color a verde
+          setTimeout(() => {
+            window.location.href = "receipt.html";
+          }, 200);
+        }
+      });
+    </script>
   </body>
 </html>
