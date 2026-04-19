@@ -12,6 +12,8 @@
     --fz-xl: 1.5rem;
 
     --radius-xl: 20px;
+    --chip-bg: rgba(255, 255, 255, 0.15);
+    --chip-glow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .card {
@@ -20,6 +22,29 @@
     -webkit-backdrop-filter: blur(var(--blur));
     border-radius: var(--radius-xl);
     padding: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+    background: var(--space-gradient);
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
 h1,
@@ -110,6 +135,12 @@ h2,
     }
 }
 
+@keyframes reEnableScroll {
+    to {
+        overflow: auto;
+    }
+}
+
 .page-entrance {
     animation: slideInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     overflow: hidden;
@@ -117,12 +148,6 @@ h2,
 
 .page-entrance main {
     animation: reEnableScroll 0s 1.5s forwards;
-}
-
-@keyframes reEnableScroll {
-    to {
-        overflow: auto;
-    }
 }
 
 .visually-hidden {
@@ -198,7 +223,6 @@ h2,
     cursor: pointer;
 }
 
-/* --- Buscador --- */
 .search-container {
     padding: 0 20px;
 }
@@ -229,7 +253,6 @@ h2,
     font-size: 0.9rem;
 }
 
-/* --- Listado de Destinos --- */
 .destinations-list {
     list-style: none;
     padding: 20px;
@@ -254,7 +277,6 @@ h2,
     margin: 0;
 }
 
-/* --- Bottom Nav --- */
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -285,72 +307,6 @@ h2,
     color: #555;
 }
 
-/* --- Variables y Reset --- */
-:root {
-    --glass: rgba(255, 255, 255, 0.1);
-    --blur: 10px;
-    --accent: #007bff;
-    --text-1: #ffffff;
-    --fz-lg: 1.25rem;
-    --fz-xl: 1.5rem;
-    --radius-xl: 20px;
-}
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-/* --- Contenedor Principal (El "Celular") --- */
-.container {
-    width: 100%;
-    max-width: 450px;
-    height: 100vh;
-    background: var(--space-gradient);
-    position: relative;
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-}
-
-/* Ajuste para Desktop (≥ 1280px) */
-@media (min-width: 1280px) {
-    .container {
-        height: 90vh;
-        max-height: 900px;
-        border-radius: 40px;
-        border: 8px solid #333;
-    }
-}
-
-/* Ajuste para Mobile (≤ 480px) */
-@media (max-width: 480px) {
-    .container {
-        max-width: 100%;
-        height: 100vh;
-        border-radius: 0;
-        border: none;
-    }
-
-    .quick-actions {
-        grid-template-columns: 1fr;
-        /* Una columna en móvil */
-    }
-
-    .action-btn {
-        width: 100%;
-        /* Botones al 100% */
-    }
-}
-
-/* --- Splash Screen --- */
 .splash-body .container {
     background: var(--space-gradient);
     justify-content: center;
@@ -367,7 +323,6 @@ body {
     height: auto;
 }
 
-/* --- Home Components --- */
 .home-header {
     padding: 20px;
 }
@@ -417,7 +372,6 @@ body {
 
 .bottom-nav {
     position: sticky;
-    /* Cambiado a sticky para que siempre esté al final del contenido del container */
     bottom: 0;
     margin-top: auto;
     width: 100%;
@@ -428,7 +382,6 @@ body {
     padding: 15px 0;
 }
 
-/* --- Animaciones --- */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -455,26 +408,14 @@ body {
     animation: slideInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
-/* ============================================================
-   SECCIÓN 3: TRAVEL (Mapa y Bottom Sheet)
-   ============================================================ */
 
-/* --- Variables Adicionales para el Mapa --- */
-:root {
-    --chip-bg: rgba(255, 255, 255, 0.15);
-    --chip-glow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-/* --- Vista del Mapa (Header) --- */
 .map-view {
     height: 60vh;
-    /* Ocupa gran parte de la pantalla */
     position: relative;
     overflow: hidden;
-    /* Fondo espacial ya definido en .container */
 }
 
-/* Chips Flotantes */
+
 .floating-chip {
     position: absolute;
     background: var(--chip-bg);
@@ -486,7 +427,6 @@ body {
     color: white;
     filter: drop-shadow(var(--chip-glow));
     pointer-events: none;
-    /* No interactivo */
 }
 
 .chip-earth {
@@ -499,7 +439,6 @@ body {
     right: 15%;
 }
 
-/* Arco de Ruta Punteado (SVG) */
 .route-arc {
     position: absolute;
     top: 15%;
@@ -509,20 +448,15 @@ body {
     opacity: 0.5;
 }
 
-/* --- Bottom Sheet Deslizable (Simulado) --- */
 .bottom-sheet {
     
     bottom: 0;
     width: 100%;
     max-width: 450px;
-    /* Limitado por el container principal */
     backdrop-filter: blur(10px);
-    /* Fondo oscuro y opaco para el panel */
     border-top-left-radius: var(--radius-xl);
     border-top-right-radius: var(--radius-xl);
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
-
-    /* Estado inicial: Contraído */
     height: 180px;
     transition: height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 
@@ -531,10 +465,8 @@ body {
     padding: 20px;
     box-sizing: border-box;
     z-index: 100;
-    /* Por encima del mapa */
 }
 
-/* Tirador/Asa para arrastrar */
 .sheet-handle {
     width: 40px;
     height: 4px;
@@ -552,15 +484,10 @@ body {
     background: rgba(255, 255, 255, 0.4);
 }
 
-/* --- Lógica de Checkbox (Hack CSS para expandir) --- */
-
-/* Cuando el checkbox está activado -> Expandir el panel */
 #sheet-toggle:checked~.bottom-sheet {
     height: 55vh;
-    /* Altura máxima permitida */
 }
 
-/* Ocultar/Mostrar contenido según el estado */
 .sheet-collapsed-content {
     display: flex;
     align-items: center;
@@ -586,7 +513,6 @@ body {
     overflow-y: auto;
 }
 
-/* --- Contenido Contraído (Estilos) --- */
 .vehicle-thumb-lg {
     width: 60px;
     height: auto;
@@ -620,7 +546,6 @@ body {
     font-weight: bold;
 }
 
-/* --- Lista de Naves (Estado Expandido) --- */
 .vehicle-item {
     display: flex;
     align-items: center;
@@ -631,7 +556,6 @@ body {
     transition: background 0.3s, border 0.3s;
 }
 
-/* Estados: Card activo resaltado (borde/acento) y Hover/Focus */
 .vehicle-item.active {
     background: rgba(0, 123, 255, 0.1);
     border: 2px solid var(--accent);
@@ -663,7 +587,6 @@ body {
     margin-left: auto;
 }
 
-/* --- Acciones Inferiores (Estilos) --- */
 .sheet-actions {
     margin-top: auto;
     display: flex;
@@ -690,7 +613,6 @@ body {
     background: rgb(28, 27, 75)
 }
 
-/* --- Swipe to Confirm (Input Range Simulado) --- */
 .swipe-container {
     background: #090a0f;
     border-radius: var(--radius-xl);
@@ -707,7 +629,6 @@ body {
     text-align: center;
     font-size: 0.9rem;
     pointer-events: none;
-    /* No interfiere con el slider */
     z-index: 1;
 }
 
@@ -720,10 +641,8 @@ body {
     cursor: ew-resize;
     position: relative;
     z-index: 2;
-    /* Por encima de la etiqueta */
 }
 
-/* El "tirador" del slider */
 .confirm-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -735,22 +654,40 @@ body {
     transition: background 0.3s;
 }
 
-/* --- Lógica de Confirmación (Hack CSS con :has()) --- */
-
-/* Cuando el slider llega al 100% (añadimos la clase visual .has(input[value="100"])) */
-
-/* Simulamos la estadía visual: Cuando el slider tiene foco, resaltamos el contenedor */
 .swipe-container:has(input[type="range"]:focus) {
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
 }
 
-/* Simulamos la confirmación: Cambiamos el color de fondo y el tirador cuando está al 100% */
 .swipe-container:has(input[type="range"][value="100"]) {
     background: rgba(0, 123, 255, 0.2);
-    /* Resaltado visual */
 }
 
 .swipe-container:has(input[type="range"][value="100"]) .confirm-slider::-webkit-slider-thumb {
     background: #28a745;
-    /* Verde para confirmar */
+}
+
+@media (min-width: 1280px) {
+    .container {
+        height: 90vh;
+        max-height: 900px;
+        border-radius: 40px;
+        border: 8px solid #333;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .action-btn {
+        width: 100%;
+    }
 }
