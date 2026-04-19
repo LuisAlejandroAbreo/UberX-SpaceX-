@@ -691,3 +691,289 @@ h2,
         width: 100%;
     }
 }
+
+.page-container {
+    width: 100%;
+    max-width: 450px;
+    background: #0F1921;
+    /* Fondo oscuro base */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* --- CABECERA --- */
+.page-header {
+    display: flex;
+    align-items: center;
+    padding: var(--space-5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 15px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.btn-back:hover,
+.btn-back:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+/* Título h1 con --fz-xl */
+.page-title {
+    font-size: var(--fz-xl);
+    font-weight: 700;
+    margin: 0;
+    margin-left: 40px;
+    padding: 20px;
+}
+
+/* --- BUSCADOR --- */
+.search-section {
+    padding: var(--space-5);
+}
+
+.search-wrapper {
+    background: #0F1921;
+    /* Más visible que el fondo */
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    transition: box-shadow 0.3s;
+    margin-bottom: 10px;
+}
+
+.search-wrapper:focus-within {
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.search-icon {
+    color: var(--text-secondary);
+    margin-right: 10px;
+}
+
+/* input type="search" solicitado */
+.search-input {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    padding: 15px 0;
+    flex: 1;
+    font-size: 1rem;
+}
+
+.search-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+/* --- LISTA DE MÉTODOS --- */
+.payment-list {
+    list-style: none;
+    padding: 0 var(--space-5);
+    margin: 0;
+    flex: 1;
+    /* Permite que el CTA inferior empuje */
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    /* Separación vertical --space-5 */
+}
+
+/* Fila como botón para accesibilidad */
+.payment-item-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: var(--glass);
+    backdrop-filter: blur(var(--blur));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    padding: 20px;
+    color: var(--text-main);
+    text-align: left;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    text-decoration: none;
+    /* Por si se usa 'a' */
+}
+
+.payment-item-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Foco visible solicitado */
+.payment-item-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--accent), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Logotipos simulados */
+.card-logo,
+.paypal-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Simulación visual de logotipos */
+.logo-visa {
+    background-color: #fff;
+    color: #1a1f71;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.logo-mastercard {
+    background: linear-gradient(45deg, #eb001b, #ff5f00);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.logo-paypal {
+    background-color: #003087;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Títulos de tarjetas con --fz-lg */
+.item-title {
+    font-size: var(--fz-lg);
+    font-weight: 600;
+    margin: 0;
+}
+
+.item-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 4px 0 0 0;
+}
+
+/* Acciones y Badges */
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--text-1);
+    margin-right: 30px;
+}
+
+/* Badge amarillo solicitado */
+.default-badge {
+    background-color: yellow;
+    color: black;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Botones de acción (edit, delete) */
+.action-btn-pay {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: color 0.3s;
+}
+
+.action-btn-pay:hover,
+.action-btn-pay:focus {
+    color: var(--text-main);
+    outline: none;
+}
+
+.action-btn.delete:hover,
+.action-btn.delete:focus {
+    color: #dc3545;
+    /* Rojo para delete */
+}
+
+/* Ícono kebab decorativo */
+.kebab-icon {
+    color: var(--text-secondary);
+    margin-left: 10px;
+    cursor: default;
+}
+
+/* --- CTA INFERIOR (STICKY) --- */
+.sticky-footer {
+    position: sticky;
+    bottom: 0;
+    padding: var(--space-5);
+    background: rgba(18, 20, 33, 0.95);
+    /* Fondo sólido difuminado */
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+    /* Empuja el CTA al final si hay poco contenido */
+}
+
+/* Botón ancho con estilos de image_0.png */
+.btn-add-new {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background-color: #2a2b3d;
+    /* Usando el color de search-wrapper para unificar */
+    color: var(--text-main);
+    border: none;
+    border-radius: var(--radius-xl);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-add-new:hover {
+    background-color: #3f4056;
+    /* Hover más claro */
+}
+
+.btn-add-new:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--accent);
+}
+
+/* --- UTILIDADES DE ACCESIBILIDAD --- */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
