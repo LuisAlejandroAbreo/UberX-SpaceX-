@@ -591,7 +591,7 @@ h2,
     margin-top: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
     padding-bottom: 10px;
 }
 
@@ -976,4 +976,116 @@ h2,
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+/* --- Lógica de Vistas --- */
+.vehicle-detail-view {
+    display: none;
+    /* Oculto por defecto */
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* Cuando el toggle de detalle está activo: */
+#detail-view-toggle:checked~.vehicle-detail-view {
+    display: flex;
+}
+
+#detail-view-toggle:checked~.vehicle-list,
+#detail-view-toggle:checked~.sheet-collapsed-content {
+    display: none !important;
+}
+
+/* Ajuste de altura del sheet para el detalle */
+#detail-view-toggle:checked~.bottom-sheet,
+#sheet-toggle:checked~.bottom-sheet:has(#detail-view-toggle:checked) {
+    height: 80vh;
+}
+
+/* --- Estilos de la Vista de Detalle (image_a6085a.png) --- */
+.surge-notice {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.detail-main-img {
+    width: 180px;
+    height: auto;
+    margin: 20px 0;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.detail-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.detail-title-group h2 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.detail-title-group p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.detail-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.token-icon {
+    width: 24px;
+    height: 24px;
+    background: #4a90e2;
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Botón Wallet estilo Imagen */
+.btn-connect-wallet {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    gap: 15px;
+}
+
+.arrow-right {
+    margin-left: auto;
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+.wallet-icon-placeholder {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    mask: url('data:image/svg+xml;utf8,<svg...>...</svg>') no-repeat center;
+    /* Aquí iría el icono */
+    background-color: white;
+    clip-path: polygon(0% 20%, 100% 20%, 100% 80%, 0% 80%);
+    /* Simulación de icono */
+}
+
+/* Ajuste del Swipe */
+.swipe-container {
+    background: rgba(255, 255, 255, 0.1);
+    height: 60px;
+    border-radius: 15px;
+}
+
+.confirm-slider::-webkit-slider-thumb {
+    width: 70px;
+    height: 50px;
+    border-radius: 12px;
 }
