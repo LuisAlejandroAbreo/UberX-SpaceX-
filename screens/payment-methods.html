@@ -1,100 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Métodos de Pago - Diseño Unificado</title>
-    <link rel="stylesheet" href="../css/app.css">
-    
-</head>
-<body>
-
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
     <div class="page-container">
-        <header class="page-header">
-            <button class="btn-back" aria-label="Volver a la página anterior">
-                <span aria-hidden="true">←</span>
-            </button>
-            <h1 class="page-title">Payment Methods</h1>
-        </header>
+      <header class="page-header">
+        <a
+          href="travel.html"
+          class="btn-back"
+          aria-label="Volver a Travel"
+          style="text-decoration: none"
+        >
+          <span aria-hidden="true">←</span>
+        </a>
+        <h1 class="page-title">Payment Methods</h1>
+      </header>
 
-        <section class="search-section">
-            <div class="search-wrapper">
-                <span class="search-icon" aria-hidden="true">🔍</span>
-                <input type="search" class="search-input" placeholder="Search payment methods" aria-label="Buscar métodos de pago">
+      <section class="search-section">
+        <div class="search-wrapper">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            class="search-input"
+            placeholder="Search payment methods"
+            aria-label="Buscar métodos de pago"
+          />
+        </div>
+      </section>
+
+      <main class="payment-content">
+        <ul class="payment-list">
+          <li>
+            <button class="payment-item-btn" role="button">
+              <span class="visually-hidden"
+                >Método de pago: Tarjeta terminada en 1234, predeterminada</span
+              >
+              <div class="card-logo logo-mastercard" aria-hidden="true">
+                <span>MC</span>
+              </div>
+
+              <div class="item-content">
+                <h2 class="item-title">**** **** **** 1234</h2>
+                <p class="item-subtitle">Expires 12/25</p>
+              </div>
+
+              <div class="item-actions">
+                <span class="default-badge">Default</span>
+                <span class="kebab-icon" aria-hidden="true">⋮</span>
+              </div>
+            </button>
+          </li>
+
+          <li>
+            <div class="payment-item-btn" role="button" tabindex="0">
+              <span class="visually-hidden"
+                >Método de pago: Tarjeta terminada en 5678</span
+              >
+              <div class="card-logo logo-visa" aria-hidden="true">
+                <span>VISA</span>
+              </div>
+
+              <div class="item-content">
+                <h2 class="item-title">**** **** **** 5678</h2>
+                <p class="item-subtitle">Expires 01/26</p>
+              </div>
+
+              <div class="item-actions">
+                <button
+                  class="action-btn-pay edit"
+                  aria-label="Editar este método de pago"
+                >
+                  <span aria-hidden="true">✏️</span>
+                </button>
+                <button
+                  class="action-btn-pay delete"
+                  aria-label="Eliminar este método de pago"
+                >
+                  <span aria-hidden="true">🗑️</span>
+                </button>
+              </div>
             </div>
-        </section>
+          </li>
 
-        <main class="payment-content">
-            <ul class="payment-list">
-                
-                <li>
-                    <button class="payment-item-btn" role="button">
-                        <span class="visually-hidden">Método de pago: Tarjeta terminada en 1234, predeterminada</span>
-                        <div class="card-logo logo-mastercard" aria-hidden="true">
-                            <span>MC</span>
-                        </div>
-                        
-                        <div class="item-content">
-                            <h2 class="item-title">**** **** **** 1234</h2>
-                            <p class="item-subtitle">Expires 12/25</p>
-                        </div>
-                        
-                        <div class="item-actions">
-                            <span class="default-badge">Default</span>
-                            <span class="kebab-icon" aria-hidden="true">⋮</span>
-                        </div>
-                    </button>
-                </li>
+          <li>
+            <button class="payment-item-btn" role="button">
+              <span class="visually-hidden"
+                >Método de pago: Cuenta de PayPal</span
+              >
+              <div class="paypal-logo logo-paypal" aria-hidden="true">
+                <span>PP</span>
+              </div>
 
-                <li>
-                    <div class="payment-item-btn" role="button" tabindex="0">
-                        <span class="visually-hidden">Método de pago: Tarjeta terminada en 5678</span>
-                        <div class="card-logo logo-visa" aria-hidden="true">
-                            <span>VISA</span>
-                        </div>
-                        
-                        <div class="item-content">
-                            <h2 class="item-title">**** **** **** 5678</h2>
-                            <p class="item-subtitle">Expires 01/26</p>
-                        </div>
-                        
-                        <div class="item-actions">
-                            <button class="action-btn-pay edit" aria-label="Editar este método de pago">
-                                <span aria-hidden="true">✏️</span>
-                            </button>
-                            <button class="action-btn-pay delete" aria-label="Eliminar este método de pago">
-                                <span aria-hidden="true">🗑️</span>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <button class="payment-item-btn" role="button">
-                        <span class="visually-hidden">Método de pago: Cuenta de PayPal</span>
-                        <div class="paypal-logo logo-paypal" aria-hidden="true">
-                            <span>PP</span>
-                        </div>
-                        
-                        <div class="item-content">
-                            <h2 class="item-title">PayPal</h2>
-                            <p class="item-subtitle">j.doe@example.com</p>
-                        
-                        
-                        </div>
-                    </button>
-                </li>
-
-            </ul>
-        </main>
-
-        <footer class="sticky-footer">
-            <button class="btn-add-new" role="button">
-                Add New Method
+              <div class="item-content">
+                <h2 class="item-title">PayPal</h2>
+                <p class="item-subtitle">j.doe@example.com</p>
+              </div>
             </button>
-        </footer>
+          </li>
+        </ul>
+      </main>
 
+      <footer class="sticky-footer">
+        <button class="btn-add-new" role="button">Add New Method</button>
+      </footer>
     </div>
-
-</body>
+  </body>
 </html>
