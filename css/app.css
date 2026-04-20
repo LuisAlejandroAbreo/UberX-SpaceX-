@@ -243,6 +243,15 @@ h2,
     margin-bottom: 10px;
 }
 
+.search-wrapper-pay {
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    transition: box-shadow 0.3s;
+    margin-bottom: 10px;
+}
+
 .search-input {
     background: transparent;
     border: none;
@@ -700,6 +709,10 @@ h2,
 }
 
 .search-wrapper:focus-within {
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.search-wrapper-pay:focus-within {
     box-shadow: 0 0 0 2px var(--accent);
 }
 
