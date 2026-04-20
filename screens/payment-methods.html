@@ -41,7 +41,7 @@
                 >Método de pago: Tarjeta terminada en 1234, predeterminada</span
               >
               <div class="card-logo logo-mastercard" aria-hidden="true">
-                <span>MC</span>
+                <span><img src="../assets/icons/mastercard.png" alt="Mastercard" class="mastercard-img"></span>
               </div>
               <div class="item-content">
                 <h2 class="item-title">**** **** **** 1234</h2>
@@ -61,7 +61,7 @@
               >
 
               <div class="card-logo logo-visa" aria-hidden="true">
-                <span>VISA</span>
+                 <span><img src="../assets/icons/visa.png" alt="Visa" class="visa-img"></span>
               </div>
 
               <div class="item-content">
@@ -81,18 +81,29 @@
           </li>
 
           <li>
-            <button class="payment-item-btn" role="button">
+            <div class="payment-item-btn no-cursor">
               <span class="visually-hidden"
                 >Método de pago: Cuenta de PayPal</span
               >
+
               <div class="paypal-logo logo-paypal" aria-hidden="true">
-                <span>PP</span>
+                <span><img src="../assets/icons/paypal.png" alt="PayPal" class="paypal-img"></span>
               </div>
+
               <div class="item-content">
                 <h2 class="item-title">PayPal</h2>
-                <p class="item-subtitle">j.doe@example.com</p>
+                <p class="item-subtitle">pepeflores@gmail.com</p>
               </div>
-            </button>
+
+              <div class="item-actions-group">
+                <button class="action-btn-pay edit" aria-label="Editar">
+                  <span aria-hidden="true">✏️</span>
+                </button>
+                <button class="action-btn-pay delete" aria-label="Eliminar">
+                  <span aria-hidden="true">🗑️</span>
+                </button>
+              </div>
+            </div>
           </li>
         </ul>
       </main>
