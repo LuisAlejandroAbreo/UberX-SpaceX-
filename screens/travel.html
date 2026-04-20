@@ -10,19 +10,9 @@
     <div class="container page-entrance">
       <header class="map-view">
         <header class="map-view">
-          <a
-            href="home.html"
-            class="btn-back"
-            aria-label="Volver a Inicio"
-            style="
-              position: absolute;
-              z-index: 10;
-              top: 20px;
-              left: 20px;
-              text-decoration: none;
-            "
-          >
-            <span aria-hidden="true">←</span>
+          <a href="home.html" class="btn-back-floating" aria-label="Volver a Inicio">
+                <span aria-hidden="true">←</span>
+            </a>
           </a>
 
           <img src="../assets/img/earth.png" alt="Earth" />
@@ -180,27 +170,24 @@
           </a>
 
           <div class="swipe-container">
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value="0"
-              class="confirm-slider"
-              id="confirm-booking"
-            />
-            <span class="swipe-label secondary-text"
-              >Swipe to Confirm Your Booking</span
-            >
-          </div>
-        </footer>
-      </section>
+          <input 
+            type="range" 
+            min="0" 
+            max="100" 
+            value="0" 
+            class="confirm-slider" 
+            id="confirm-booking"
+          >
+    <span class="swipe-label">Swipe to Confirm Your Booking</span>
+    </div>
+    </footer>
+    </section>
     </div>
     <script>
       const confirmSlider = document.getElementById("confirm-booking");
 
       confirmSlider.addEventListener("input", (e) => {
         if (e.target.value === "100") {
-          // Pequeño retraso para que el usuario vea el cambio de color a verde
           setTimeout(() => {
             window.location.href = "receipt.html";
           }, 200);

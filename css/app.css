@@ -1261,3 +1261,226 @@ h2,
     width: 100%;
     box-sizing: border-box;
 }
+
+.btn-back-floating {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.btn-back-floating:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para el texto dentro de la tarjeta de seguridad */
+.security-text h2 {
+    font-size: 1rem;
+    margin: 0 0 8px 0;
+    /* Eliminamos márgenes por defecto y damos espacio abajo */
+}
+
+.security-link {
+    color: beige;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: opacity 0.3s;
+}
+
+.security-link:hover {
+    opacity: 0.8;
+}
+
+/* Estilo para la imagen del astronauta */
+.security-img-small {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Contenedor del título con botón de regreso */
+.header-flex {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    /* Ajusta según el diseño de tu app */
+}
+
+/* Estilo para el botón de volver (reutilizando propiedades comunes) */
+.btn-back-nav {
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+.btn-back-nav:hover {
+    opacity: 0.7;
+}
+
+/* Ajuste para el título centrado */
+.title-x3 {
+    font-size: var(--fz-xl);
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Contenedor principal del contenido de pagos */
+.payment-content {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Lista de métodos de pago */
+.payment-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+}
+
+/* Estilos para el botón de ítem de pago (ya tenías algunos en app.css) */
+.payment-item-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: var(--glass);
+    backdrop-filter: blur(var(--blur));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    padding: 20px;
+    color: var(--text-main);
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Contenedor del pie de página con efecto de desenfoque */
+.footer-sticky-action {
+    padding: 20px;
+    background: rgba(20, 20, 35, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón de acción principal (variante oscura) */
+.btn-primary-dark {
+    font-size: 1.1rem;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #283039;
+    border: none;
+    border-radius: var(--radius-xl);
+    padding: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary-dark:hover {
+    background-color: #353f4b;
+    transform: translateY(-2px);
+}
+
+.btn-primary-dark:active {
+    transform: translateY(0);
+}
+
+/* Contenedor específico para la navegación del recibo */
+.bottom-nav-receipt {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #D5D4E6;
+    /* Color lavanda de tu diseño */
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo para los botones de acción (iconos naranja) */
+.action-btn-pay span {
+    color: #ff6b00;
+    /* Color naranja de la imagen */
+    font-size: 1.5rem;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.action-btn-pay:hover span {
+    transform: scale(1.2);
+    /* Efecto sutil al pasar el ratón */
+}
+
+/* Contenedor principal del swipe */
+.swipe-container {
+    background: #090a0f;
+    /* Color oscuro profundo */
+    border-radius: var(--radius-xl);
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    margin: 0px;
+}
+
+/* Texto que queda por debajo del slider */
+.swipe-label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    pointer-events: none;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* El input tipo range transformado en slider */
+.confirm-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilo del "tirador" o thumb del slider */
+.confirm-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 70px;
+    height: 50px;
+    background: var(--accent);
+    /* Azul por defecto */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: grab;
+    transition: background 0.3s;
+}
+
+.confirm-slider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
