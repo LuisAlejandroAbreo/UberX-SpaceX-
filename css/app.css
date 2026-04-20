@@ -1282,11 +1282,9 @@ h2,
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Estilos para el texto dentro de la tarjeta de seguridad */
 .security-text h2 {
     font-size: 1rem;
     margin: 0 0 8px 0;
-    /* Eliminamos márgenes por defecto y damos espacio abajo */
 }
 
 .security-link {
@@ -1300,22 +1298,18 @@ h2,
     opacity: 0.8;
 }
 
-/* Estilo para la imagen del astronauta */
 .security-img-small {
     width: 80px;
     height: auto;
     object-fit: contain;
 }
 
-/* Contenedor del título con botón de regreso */
 .header-flex {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    /* Ajusta según el diseño de tu app */
 }
 
-/* Estilo para el botón de volver (reutilizando propiedades comunes) */
 .btn-back-nav {
     text-decoration: none;
     color: white;
@@ -1330,21 +1324,18 @@ h2,
     opacity: 0.7;
 }
 
-/* Ajuste para el título centrado */
 .title-x3 {
     font-size: var(--fz-xl);
     font-weight: 700;
     margin: 0;
 }
 
-/* Contenedor principal del contenido de pagos */
 .payment-content {
     padding: 20px;
     flex: 1;
     overflow-y: auto;
 }
 
-/* Lista de métodos de pago */
 .payment-list {
     list-style: none;
     padding: 0;
@@ -1354,7 +1345,6 @@ h2,
     margin: 0;
 }
 
-/* Estilos para el botón de ítem de pago (ya tenías algunos en app.css) */
 .payment-item-btn {
     display: flex;
     align-items: center;
@@ -1369,7 +1359,6 @@ h2,
     transition: background 0.3s, transform 0.2s;
 }
 
-/* Contenedor del pie de página con efecto de desenfoque */
 .footer-sticky-action {
     padding: 20px;
     background: rgba(20, 20, 35, 0.9);
@@ -1381,7 +1370,6 @@ h2,
     box-sizing: border-box;
 }
 
-/* Botón de acción principal (variante oscura) */
 .btn-primary-dark {
     font-size: 1.1rem;
     width: 100%;
@@ -1404,22 +1392,18 @@ h2,
     transform: translateY(0);
 }
 
-/* Contenedor específico para la navegación del recibo */
 .bottom-nav-receipt {
     display: flex;
     justify-content: space-around;
     padding: 15px;
     background-color: #D5D4E6;
-    /* Color lavanda de tu diseño */
     position: relative;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Estilo para los botones de acción (iconos naranja) */
 .action-btn-pay span {
     color: #ff6b00;
-    /* Color naranja de la imagen */
     font-size: 1.5rem;
     display: inline-block;
     transition: transform 0.2s ease;
@@ -1427,13 +1411,10 @@ h2,
 
 .action-btn-pay:hover span {
     transform: scale(1.2);
-    /* Efecto sutil al pasar el ratón */
 }
 
-/* Contenedor principal del swipe */
 .swipe-container {
     background: #090a0f;
-    /* Color oscuro profundo */
     border-radius: var(--radius-xl);
     padding: 0px;
     display: flex;
@@ -1444,7 +1425,6 @@ h2,
     margin: 0px;
 }
 
-/* Texto que queda por debajo del slider */
 .swipe-label {
     position: absolute;
     width: 100%;
@@ -1455,7 +1435,6 @@ h2,
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* El input tipo range transformado en slider */
 .confirm-slider {
     -webkit-appearance: none;
     appearance: none;
@@ -1467,7 +1446,6 @@ h2,
     z-index: 2;
 }
 
-/* Estilo del "tirador" o thumb del slider */
 .confirm-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -1483,4 +1461,67 @@ h2,
 
 .confirm-slider::-webkit-slider-thumb:active {
     cursor: grabbing;
+}
+
+.item-main-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.item-actions-group {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.payment-item-btn .item-title {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.action-btn-pay {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.action-btn-pay:hover {
+    opacity: 0.7;
+}
+
+.card-logo {
+    flex-shrink: 0;
+}
+
+.payment-content .item-content {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.payment-item-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.item-content {
+    flex: 1;
+    margin-right: 10px;
+    min-width: 0;
+}
+
+.item-actions-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }

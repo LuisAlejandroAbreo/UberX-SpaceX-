@@ -37,10 +37,9 @@
         <ul class="payment-list">
           <li>
             <button class="payment-item-btn" role="button">
-              <span class="visually-hidden">
-                Método de pago: Tarjeta terminada en 1234, predeterminada
-              </span>
-
+              <span class="visually-hidden"
+                >Método de pago: Tarjeta terminada en 1234, predeterminada</span
+              >
               <div class="card-logo logo-mastercard" aria-hidden="true">
                 <span>MC</span>
               </div>
@@ -56,89 +55,25 @@
           </li>
 
           <li>
-            <div
-              class="payment-item-btn"
-              role="button"
-              tabindex="0"
-              style="
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 15px;
-                width: 100%;
-                box-sizing: border-box;
-              "
-            >
+            <div class="payment-item-btn no-cursor">
               <span class="visually-hidden"
                 >Método de pago: Tarjeta terminada en 5678</span
               >
 
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  flex: 1;
-                  min-width: 0;
-                "
-              >
-                <div
-                  class="card-logo logo-visa"
-                  aria-hidden="true"
-                  style="flex-shrink: 0"
-                >
-                  <span>VISA</span>
-                </div>
-
-                <div
-                  class="item-content"
-                  style="min-width: 0; overflow: hidden"
-                >
-                  <h2
-                    class="item-title"
-                    style="
-                      font-size: 1.1rem;
-                      white-space: nowrap;
-                      overflow: hidden;
-                      text-overflow: ellipsis;
-                    "
-                  >
-                    **** **** **** 5678
-                  </h2>
-                  <p class="item-subtitle">Expires 01/26</p>
-                </div>
+              <div class="card-logo logo-visa" aria-hidden="true">
+                <span>VISA</span>
               </div>
 
-              <div
-                class="item-actions"
-                style="
-                  display: flex;
-                  gap: 10px;
-                  margin-left: 10px;
-                  flex-shrink: 0;
-                "
-              >
-                <button
-                  class="action-btn-pay edit"
-                  aria-label="Editar"
-                  style="
-                    background: none;
-                    border: none;
-                    font-size: 1.2rem;
-                    cursor: pointer;
-                  "
-                >
+              <div class="item-content">
+                <h2 class="item-title">**** **** **** 5678</h2>
+                <p class="item-subtitle">Expires 01/26</p>
+              </div>
+
+              <div class="item-actions-group">
+                <button class="action-btn-pay edit" aria-label="Editar">
                   <span aria-hidden="true">✏️</span>
                 </button>
-                <button
-                  class="action-btn-pay delete"
-                  aria-label="Eliminar"
-                  style="
-                    background: none;
-                    border: none;
-                    font-size: 1.2rem;
-                    cursor: pointer;
-                  "
-                >
+                <button class="action-btn-pay delete" aria-label="Eliminar">
                   <span aria-hidden="true">🗑️</span>
                 </button>
               </div>
@@ -161,12 +96,10 @@
           </li>
         </ul>
       </main>
+
       <footer class="footer-sticky-action">
-    <button class="btn-primary-dark" type="button">
-        Add New Method
-    </button>
-</footer>
-      
+        <button class="btn-primary-dark" type="button">Add New Method</button>
+      </footer>
     </div>
   </body>
 </html>
