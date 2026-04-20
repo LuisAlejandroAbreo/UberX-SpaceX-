@@ -163,42 +163,24 @@
           </div>
         </div>
 
-        <footer class="sheet-actions">
-          <a href="payment-methods.html" class="btn-connect-wallet">
-            <div class="wallet-icon-placeholder"></div>
-            <img
-              src="../assets/icons/wallet.png"
-              alt="wallet-icon"
-              class="wallet-icon"
-            />
-            <span>Connect Wallet</span>
-            <span class="arrow-right">›</span>
-          </a>
+  <footer class="sheet-actions">
+    <a href="payment-methods.html" class="btn-connect-wallet">
+      <div class="wallet-icon-placeholder"></div>
+      <img src="../assets/icons/wallet.png" alt="wallet-icon" class="wallet-icon" />
+      <span>Connect Wallet</span>
+      <span class="arrow-right">›</span>
+    </a>
 
-          <div class="swipe-container">
-          <input 
-            type="range" 
-            min="0" 
-            max="100" 
-            value="0" 
-            class="confirm-slider" 
-            id="confirm-booking"
-          >
-    <span class="swipe-label">Swipe to Confirm Your Booking</span>
+    <div class="swipe-wrapper">
+      <input type="checkbox" id="confirm-trigger" class="visually-hidden">
+      <div class="swipe-container-new">
+        <span class="swipe-label">Swipe To Confirm your Booking</span>
+        <label for="confirm-trigger" class="swipe-handle"></label>
+        <a href="receipt.html" class="booking-link">Confirm→</a>
+      </div>
     </div>
-    </footer>
-    </section>
-    </div>
-    <script>
-      const confirmSlider = document.getElementById("confirm-booking");
-
-      confirmSlider.addEventListener("input", (e) => {
-        if (e.target.value === "100") {
-          setTimeout(() => {
-            window.location.href = "receipt.html";
-          }, 200);
-        }
-      });
-    </script>
+  </footer>
+  </section>
+  </div>
   </body>
 </html>
