@@ -268,7 +268,7 @@ h2,
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 15px 0;
+    padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1299,8 +1299,8 @@ h2,
 }
 
 .security-img-small {
-    width: 80px;
-    height: auto;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
 }
 
@@ -1452,7 +1452,6 @@ h2,
     width: 70px;
     height: 50px;
     background: var(--accent);
-    /* Azul por defecto */
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     cursor: grab;
@@ -1511,7 +1510,6 @@ h2,
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
-
 }
 
 .item-content {
