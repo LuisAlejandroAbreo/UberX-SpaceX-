@@ -98,11 +98,6 @@ h2,
     animation: fadeInUp 1s ease-out forwards;
 }
 
-.logo-image-wrapper {
-    margin-top: 200px;
-    width: 200px;
-}
-
 .splash-logo-img {
     max-width: 80%;
     height: auto;
@@ -338,13 +333,51 @@ h2,
 }
 
 .logo-image-wrapper {
-    width: 250px;
-    animation: fadeInUp 1s ease-out forwards;
+    width: 380px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbital-svg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    transform: rotateX(60deg) rotateY(-10deg);
+    z-index: -2;
+}
+
+.orbit-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawOrbit 3s ease-in-out forwards;
+}
+
+
+@keyframes orbitMove {
+    from {
+        offset-distance: 0%;
+    }
+
+    to {
+        offset-distance: 100%;
+    }
+}
+
+@keyframes drawOrbit {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 .splash-logo-img {
     width: 100%;
     height: auto;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 15px rgba(0, 118, 245, 0.2));
 }
 
 .bottom-nav {
