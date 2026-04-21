@@ -98,30 +98,10 @@ h2,
     animation: fadeInUp 1s ease-out forwards;
 }
 
-.splash-logo-img {
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(100vh);
     }
 
     to {
@@ -296,18 +276,6 @@ h2,
     margin: 0;
 }
 
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: rgba(20, 20, 35, 0.9);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px 0;
-}
-
 .nav-item {
     text-decoration: none;
     color: #1a1a1a;
@@ -372,6 +340,18 @@ h2,
     }
 }
 
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .splash-logo-img {
     width: 100%;
     height: auto;
@@ -390,28 +370,6 @@ h2,
     display: flex;
     justify-content: space-around;
     padding: 15px 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        transform: translateY(100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
 }
 
 .map-view {
