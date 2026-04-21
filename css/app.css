@@ -1,4 +1,3 @@
-
 :root {
     background: var(--space-gradient, linear-gradient(to top right, #2e0043, #03053c, #021884));
     --glass: rgba(255, 255, 255, 0.1);
@@ -141,15 +140,10 @@ h2,
     }
 }
 
-.page-entrance {
+.page-entrance,
+.page-entrance-payment {
     animation: slideInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-    overflow: hidden;
-}
-
-.page-entrance-payment{
-    animation: slideInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-    overflow: hidden;
-    background-color: #0F1921;
+    overflow-y: auto;
 }
 
 .page-entrance main {
@@ -169,6 +163,10 @@ h2,
 
 .home-header {
     padding: 20px;
+}
+
+.home-header-pay {
+    background-color: #121b22;
 }
 
 .user-profile {
@@ -233,6 +231,11 @@ h2,
     padding: 0 20px;
 }
 
+.search-container-pay {
+    padding: 0 20px;
+    background-color: #121b22;
+}
+
 .search-wrapper {
     background: #2a2b3d;
     border-radius: var(--radius-xl);
@@ -245,6 +248,7 @@ h2,
 
 .search-wrapper-pay {
     border-radius: var(--radius-xl);
+    background-color: #121b22;
     display: flex;
     align-items: center;
     padding: 5px 15px;
@@ -416,7 +420,7 @@ h2,
 }
 
 .bottom-sheet {
-    
+
     bottom: 0;
     width: 100%;
     max-width: 450px;
@@ -452,7 +456,9 @@ h2,
 }
 
 #sheet-toggle:checked~.bottom-sheet {
-    height: 55vh;
+    height: auto;
+    max-height: 85vh;
+    overflow-y: auto;
 }
 
 .sheet-collapsed-content {
@@ -464,9 +470,10 @@ h2,
 
 .vehicle-list {
     display: none;
-    margin-top: 30px;
+    margin-top: 10px;
     list-style: none;
     padding: 0;
+    overflow-y: auto;
 }
 
 #sheet-toggle:checked~.bottom-sheet .sheet-collapsed-content {
@@ -518,15 +525,10 @@ h2,
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 15px 10px;
+    padding: 10px 10px;
     border-radius: var(--radius-xl);
     cursor: pointer;
     transition: background 0.3s, border 0.3s;
-}
-
-.vehicle-item.active {
-    background: rgba(0, 123, 255, 0.1);
-    border: 2px solid var(--accent);
 }
 
 .vehicle-item:hover {
@@ -571,7 +573,7 @@ h2,
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
-    margin-top: 30px;
+    margin-top: 0px;
     border-radius: var(--radius-xl);
     text-decoration: none;
     transition: background 0.3s;
@@ -799,6 +801,7 @@ h2,
 .logo-paypal {
     background-color: #ffffff;
 }
+
 .paypal-logo img {
     width: 30px;
     height: auto;
@@ -992,21 +995,21 @@ h2,
 }
 
 .people-number {
-        position: absolute;
-        top: -5px;
-        right: -10px;
-        font-weight: 800;
-        color: white;
-        min-width: 12px;
-        text-align: center;
-        line-height: 1;
-        font-size: 0.9rem;
-    }
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-weight: 800;
+    color: white;
+    min-width: 12px;
+    text-align: center;
+    line-height: 1;
+    font-size: 0.9rem;
+}
 
 .icon-container {
-        position: relative;
-        display: inline-block;
-    }
+    position: relative;
+    display: inline-block;
+}
 
 .btn-connect-wallet {
     background: rgba(255, 255, 255, 0.05);
@@ -1196,6 +1199,7 @@ h2,
 .title-x2 {
     text-align: center;
     margin-left: 50px;
+    background-color: #121b22;
 }
 
 .receipt-card {
@@ -1312,6 +1316,7 @@ h2,
     padding: 20px;
     flex: 1;
     overflow-y: auto;
+    background-color: #121b22;
 }
 
 .payment-list {
@@ -1345,6 +1350,7 @@ h2,
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
+    background-color: #121b22;
 }
 
 .btn-primary-dark {
@@ -1549,6 +1555,7 @@ h2,
     opacity: 1;
     pointer-events: auto;
 }
+
 .swipe-label {
     width: 100%;
     text-align: center;
