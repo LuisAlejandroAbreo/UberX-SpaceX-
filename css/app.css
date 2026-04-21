@@ -381,7 +381,7 @@ h2,
 }
 
 .map-view {
-    height: 60vh;
+    height: 55vh;
     position: relative;
     overflow: hidden;
 }
@@ -456,11 +456,10 @@ h2,
 }
 
 #sheet-toggle:checked~.bottom-sheet {
-    height: auto;
-    max-height: 85vh;
-    overflow-y: auto;
-}
-
+        height: auto;
+        max-height: none;
+        overflow-y: visible;
+    }
 .sheet-collapsed-content {
     display: flex;
     align-items: center;
@@ -470,11 +469,12 @@ h2,
 
 .vehicle-list {
     display: none;
-    margin-top: 10px;
-    list-style: none;
-    padding: 0;
-    overflow-y: auto;
-}
+        margin-top: 10px;
+        list-style: none;
+        padding: 0;
+        overflow-y: visible;
+        height: auto;
+    }
 
 #sheet-toggle:checked~.bottom-sheet .sheet-collapsed-content {
     display: none;
