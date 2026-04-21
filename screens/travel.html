@@ -8,15 +8,23 @@
   </head>
   <body>
     <div class="container page-entrance">
-      <header class="map-view">
         <header class="map-view">
-          <a href="home.html" class="btn-back-floating" aria-label="Volver a Inicio">
-                <span aria-hidden="true">←</span>
-            </a>
-          </a>
+    <a href="home.html" class="btn-back-floating" aria-label="Volver a Inicio">
+        <span aria-hidden="true">←</span>
+    </a>
+    
+    <img src="../assets/img/earth.png" alt="Earth" />
 
-          <img src="../assets/img/earth.png" alt="Earth" />
-        </header>
+    <div class="floating-chip chip-earth">
+        <span>Earth</span>
+    </div>
+    <div class="floating-chip chip-mars">
+        <span>Mars</span>
+    </div>
+
+    <svg class="route-arc" viewBox="0 0 400 300">
+        <path d="M50 30 Q 200 50, 350 230" fill="none" stroke="white" stroke-width="2" stroke-dasharray="8 8" />
+    </svg>
         <img src="../assets/img/earth.png" alt="Earth" />
         <div class="floating-chip chip-earth">
           <span>Earth</span>
@@ -24,16 +32,6 @@
         <div class="floating-chip chip-mars">
           <span>Mars</span>
         </div>
-
-        <svg class="route-arc" viewBox="0 0 400 300">
-          <path
-            d="M50 30 Q 200 50, 350 150"
-            fill="none"
-            stroke="rgba(255,255,255,0.3)"
-            stroke-width="2"
-            stroke-dasharray="8 8"
-          />
-        </svg>
       </header>
 
       <main class="travel-content visually-hidden">
