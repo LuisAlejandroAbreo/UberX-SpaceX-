@@ -143,6 +143,7 @@ h2,
 
 .home-header-pay {
     background-color: #121b22;
+    padding: 10px 0;
 }
 
 .user-profile {
@@ -367,6 +368,7 @@ h2,
     width: 100%;
     background: rgba(20, 20, 35, 0.95);
     backdrop-filter: blur(10px);
+    border-radius: 15px;
     display: flex;
     justify-content: space-around;
     padding: 15px 0;
@@ -970,12 +972,14 @@ h2,
     font-size: 0.8rem;
     opacity: 0.6;
     margin-bottom: 20px;
+    border-bottom: 1px solid white;
+
 }
 
 .detail-main-img {
     width: 100px;
     height: auto;
-    margin: 10px 0;
+    margin: 20px 0;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
 }
 
@@ -985,6 +989,7 @@ h2,
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 30px;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .detail-title-group h2 {
@@ -1054,7 +1059,7 @@ h2,
 }
 
 .wallet-icon-placeholder {
-    width: 24px;
+    width: 2px;
     height: 24px;
     background: #fff;
     mask: url('data:image/svg+xml;utf8,<svg...>...</svg>') no-repeat center;
@@ -1230,10 +1235,13 @@ h2,
 }
 
 .title-x2 {
+    margin: 0;
     text-align: center;
-    margin-left: 50px;
-    background-color: #121b22;
-}
+    font-size: var(--fz-xl);
+    width: 100%;
+    background-color: transparent;
+    }
+
 
 .receipt-card {
     background: rgba(255, 255, 255, 0.95);
@@ -1282,26 +1290,6 @@ h2,
     box-sizing: border-box;
 }
 
-.btn-back-floating {
-    position: absolute;
-    z-index: 10;
-    top: 20px;
-    left: 20px;
-    text-decoration: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    transition: background 0.3s;
-}
-
-.btn-back-floating:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
 .security-link {
     color: beige;
     text-decoration: none;
@@ -1322,21 +1310,30 @@ h2,
 .header-flex {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    justify-content: center;
+    position: relative;
+    min-height: 60px;
 }
 
 .btn-back-nav {
+    position: absolute;
+    z-index: 10;
+    top: 5px;
+    left: 20px;
     text-decoration: none;
+    background: none;
+    border: none;
     color: white;
-    margin-right: 15px;
     font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    transition: opacity 0.3s;
-}
-
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    }
+    
 .btn-back-nav:hover {
     opacity: 0.7;
+    background-color: #5c5c5c;
 }
 
 .title-x3 {
@@ -1365,12 +1362,12 @@ h2,
     display: flex;
     align-items: center;
     width: 100%;
-    background: var(--glass);
+    background-color: #121b22;
     backdrop-filter: blur(var(--blur));
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 0px;
     border-radius: var(--radius-xl);
     cursor: pointer;
-    padding: 20px;
+    padding: 15px;
     color: var(--text-main);
     transition: background 0.3s, transform 0.2s;
 }
