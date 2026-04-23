@@ -14,7 +14,7 @@ Facilitar la gestion y reserva de los viajes espaciales **con una interfaz agrad
 Acceda a la siguiente pagina para visualizar la APP
 
 ```
-https://github.com/LuisAlejandroAbreo/UberX-SpaceX-
+https://luisalejandroabreo.github.io/UberX-SpaceX-/
 ```
 
 ## 🗂️ Estructura principal del repositorio
