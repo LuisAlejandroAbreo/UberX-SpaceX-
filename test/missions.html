@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UberX - My Journeys</title>
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <div class="container page-entrance">
+      <header class="journeys-header">
+        <div class="header-missions">
+          <a href="/screens/home.html" class="btn-back-nav" aria-label="Volver a Home">
+            <span aria-hidden="true">←</span>
+          </a>
+          <h1>Missions</h1>
+        </div>
+        <div class="barra-stats">
+          <div class="nave-stat">
+            <span class="valor-stat">5</span>
+            <span class="nombre-cajon">Vuelos Totales</span>
+          </div>
+          <div class="nave-stat">
+            <span class="valor-stat">38</span>
+            <span class="nombre-cajon">Dias en el espacio</span>
+          </div>
+          <div class="nave-stat">
+            <span class="valor-stat">250</span>
+            <span class="nombre-cajon">Tokens Gastados</span>
+          </div>
+        </div>
+      </header>
+      <section class="Missions">
+        <ul class="lista-vuelos">
+          <li class="año-vuelo">Completado</li>
+          <li>
+            <a href="/screens/receipt.html" class="viaje-carta">
+              <div class="carta-top">
+                <div class="vehiculo"><img src="/assets/icons/crew-dragon.png" alt=""></div>
+                <div class="carta-meta">
+                  <p class="ruta">Earth → Mars</p>
+                  <p class="vehiculo-nombre">Crew Dragon · Vuelo AN-209</p>
+                </div>
+                <span class="estado-pila estado-completo">Completado</span>
+              </div>
+              <div class="carta-dividora"></div>
+              <div class="carta-boton">
+                <span class="dato-vuelo">12 Mar 2053 · 19:30</span>
+                <span class="duracion-vuelo">⏱ 18d 13h</span>
+                <span class="vuelo-costo">48.5 <span class="tokens-viaje"><img src="
+                  /assets/icons/token.png" alt="" width="14"></span></span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/screens/receipt.html" class="viaje-carta">
+              <div class="carta-top">
+                <div class="vehiculo"><img src="/assets/icons/starliner.png" alt=""></div>
+                <div class="carta-meta">
+                  <p class="ruta">Earth → ISS</p>
+                  <p class="vehiculo-nombre">Starliner · Vuelo SL-047</p>
+                </div>
+                <span class="estado-pila estado-completo">Completado</span>
+              </div>
+              <div class="carta-dividora"></div>
+              <div class="carta-boton">
+                <span class="dato-vuelo">3 Nov 2052 · 08:15</span>
+                <span class="duracion-vuelo">⏱ 6h 22m</span>
+                <span class="vuelo-costo">51.2 <span class="tokens-viaje"><img src="
+                  /assets/icons/token.png" alt="" width="14"></span></span>
+              </div>
+            </a>
+          <li>
+            <a href="/screens/receipt.html" class="viaje-carta">
+              <div class="carta-top">
+                <div class="vehiculo"><img src="/assets/icons/dream_chaser.png" alt=""></div>
+                <div class="carta-meta">
+                  <p class="ruta">Earth → Moon</p>
+                  <p class="vehiculo-nombre">Dream Chaser · Vuelo DC-018</p>
+                </div>
+                <span class="estado-pila estado-completo">Completado</span>
+              </div>
+              <div class="carta-dividora"></div>
+              <div class="carta-boton">
+                <span class="dato-vuelo">17 Jun 2052 · 14:00</span>
+                <span class="duracion-vuelo">⏱ 3d 4h</span>
+                <span class="vuelo-costo">
+                  102.5 <span class="tokens-viaje"><img src="
+                  /assets/icons/token.png" alt="" width="14"></span>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="año-vuelo">Programado</li>
+        <li>
+          <a href="/screens/receipt.html" class="viaje-carta">
+            <div class="carta-top">
+              <div class="vehiculo"><img src="/assets/icons/crew-dragon.png" alt=""></div>
+              <div class="carta-meta">
+                <p class="ruta">Earth → Mars</p>
+                <p class="vehiculo-nombre">Crew Dragon · Vuelo AN-223</p>
+              </div>
+              <span class="estado-pila estado-programado">Programado</span>
+            </div>
+            <div class="carta-dividora"></div>
+            <div class="carta-boton">
+              <span class="dato-vuelo">20 Mar 2052 · 13:30</span>
+              <span class="duracion-vuelo">⏱ 17d 17h</span>
+              <span class="vuelo-costo">48.5 <span class="tokens-viaje"><img src="
+                  /assets/icons/token.png" alt="" width="14"></span></span>
+            </div>
+          </a>
+        </li>
+        <li class="año-vuelo">Cancelado</li>
+        <li>
+          <a href="#" class="viaje-carta">
+            <div class="carta-top">
+                <div class="vehiculo"><img src="/assets/icons/starliner.png" alt=""></div>
+                <div class="carta-meta">
+                  <p class="ruta">Earth → ISS</p>
+                  <p class="vehiculo-nombre">Starliner · Vuelo SL-133</p>
+                </div>
+              <span class="estado-pila estado-cancelado ">Cancelado</span>
+            </div>
+            <div class="carta-dividora"></div>
+            <div class="carta-boton">
+              <span class="dato-vuelo">25 Mar 2052 · 10:45</span>
+              <span class="duracion-vuelo">⏱ —</span>
+              <span class="vuelo-costo">Reembolsado</span>
+            </div>
+          </a>
+        </li>
+        </ul>
+        </section>
+        <nav class="bottom-nav">
+          <a href="/screens/home.html" class="nav-item inactive">
+            <img src="../assets/icons/home.png" alt="Home" width="30" />
+            <span>Home</span>
+          </a>
+          <a href="missions.html" class="nav-item active" aria-current="page">
+            <img src="../assets/icons/journeys.png" alt="Journeys" width="30" />
+            <span>Journeys</span>
+          </a>
+        </nav>
+      </div>
+    </body>
+</html>
